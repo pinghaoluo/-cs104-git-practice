@@ -1,0 +1,39 @@
+Problem 1
+
+a unmodified
+b modified and untracked 
+c both staged
+d modified and modified
+e staged and unmodified
+f modified since the uncommited change is neglaected
+
+
+
+
+Problem 3
+
+It will output 54321.
+in Function A the while loop
+  while (out->next != nullptr) {
+    out = out->next;
+    }
+
+will change out to the tail of the linked list since tail->next = nullptr. 
+the finally Function A return out which means return the address of the last element of linklist. 
+
+In Function B
+
+   if (in->next != nullptr) {
+    funcB(in->next)->next = in;
+   }
+
+Will keep finding the last elements of linklist and assign last element->next to in, the first element. 
+then it will point the (element->next)->next point to the address of element. 
+For example: &4->next=&5
+(4->next)->next = 4
+5->next=4
+(I can totally understand this how this function works but I feel it is so hard to explain it!)
+
+Ands in function A funcB(in)->next = NULL; will point the first element->next to NULL.
+
+So at last for the link list 1,2,3,4,5. will become 5,4,3,2,1

@@ -1,0 +1,19 @@
+P1
+A 1 4
+B 234
+C 2345
+D 2
+E 23
+
+P2
+a 3
+b 1
+c 1 git add hw1q2b.cpp  2 git log -3
+d it will pop up a screen showing commmit not successful
+
+P4
+1 15 
+2 Because it will stop until n=1 or n<2
+3 funcA(n) output the sum of all prime number of N. Ie will kepp on deviding n to 
+get all prime factors of n until n<2 or i=n.
+

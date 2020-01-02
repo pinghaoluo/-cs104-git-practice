@@ -1,0 +1,54 @@
+HW 3 Pinghao Luo  pinghaol@usc.edu
+
+Problem 1
+1 list since we need a list of subjects with order and only list saved element with oder.
+2 set because we only need to save a list of name and set meets this requirement.
+3 set set is the map with same key and values. so set can meet the requirement that call a name and pop up the student with the same name.
+4 map given a key to map and it pop the value.
+
+
+Problem 2
+(a)  θ(n^2)  The runtime of for (int k = 0; k <= j; k++) is θ(1) the run time of for (int j = 0; j <= i; j++) is the summation from 1 to i
+and the runtime for for (int i = 0; i < n; i ++) is summation form 0 to n-1. so the total is n(n-1)/2 = θ(n^2)
+
+(b)  θ(n)
+The run time of the for loop from i=0 to i = logn so it take 2^logn = θ(n) and each time the Function take θ(1) so the suntime is θ(n).
+(c)  θ(n^2*logn)
+curr->data will be true every n/i times in the iteration. the runtime is n(1 + 1/2 +1/3 +...1/n) =nlogn and for (int i = 1; i <= n; i++) run n times.
+so the total runtimer is n*nlogn =  θ(n^2*logn). The first for loop run θ(n) but it is smaller than the second one. 
+
+(d)  θ(n)
+The arraqy resize every log3(n) times. the run time from i=1 to log3(n),. that is 3^log3(n) = n.
+
+problem 6
+(a)
+                 stack1          stack2
+
+pushback (1)     1
+pushback (2)     1,2
+popfront ()                        2
+pushfront (3)                      2,3
+pushfront (4)                     2,3,4
+popback ()      4,3                
+pushfront (5)   4,3               5     
+pushback (6)    3,4,6             5 
+
+
+(b)
+pushback(): θ(1)
+Everytime append a new node to the end of stack1 and it cost cvonstant time. 
+pushfront(): θ(1)
+Everytime append a new node to the end of stack2 and it cost cvonstant time. 
+popfront(): θ(n)
+When stack2 is empty we need to pop everything from stack1 which cost n and push everything to stack2 which cost n so the total runtinme is 2n.
+popback(): θ(n)
+It is the same as popfront.
+(c)
+θ(1) 
+When we pushback/pushfront it take 1. When a stack is empty, we need to pop everything from one stack and push them back to the other. so it totally take 
+θ(3) times and this is θ(1). 
+(d)
+θ(n)
+when pushpach everything and call popfront and popback. the amortized runtime is θ(n)
+The total runtime is n(n+1)/2 =n^2 and the amortized runtime is n^2/n=n
+

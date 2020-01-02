@@ -1,0 +1,7 @@
+The run time is k*n*logk(n),
+
+The run time for merge is n*k, for n is the length of the sub array.
+For mergeSort, the original array of length n is devided into k of n/k, then k^2 of n/k^2 ...
+The sum of the running time is k*n. Since the array splits logk(n) times, the total is k*n*logk(n).
+
+When k is equal to k, it assembles Selection Sort, and the running time is n^2.

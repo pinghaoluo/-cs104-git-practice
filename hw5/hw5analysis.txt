@@ -1,0 +1,13 @@
+
+1 Analyze the running time for figuring out which line a GOTO, GOSUB, 
+0(log n) In hw5.cpp line 210~223, I used a map.find(command) to check if it is GOTO or GOSUB. it takes (logn ) to find something in the map
+
+2
+Analyze the running time for figuring out the command that a RETURN jumps to. That is, how long does it take to go from seeing RETURN until you know the command to go to.
+I stored all the line form GOSUB in a stack in command.cpp line129~130. Then I  pop the top value in a stack to get the line to jump back to incommand.cpp line 151~155. So a stack.pop() takes 0(logn)
+
+3 Analyze the running time for figuring out the value of a variable or overwriting the value of a variable.
+The same as  GOTO ot GOSUB. O(logn) AS hw5line 211, I called a command->run which call a getvalue() function in AE class. It do map.find(variable) to get the value. So it takes O(logn)
+)
+4 Analyze the running time for figuring out the value of an array entry, assuming you have already figured out the numerical value of the index. 
+It is exatly the same things as variable. I called command->run and this called map.find(array) to get the value .It takes O(logn)
